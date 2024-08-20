@@ -6,7 +6,7 @@ library(tidyr)
 library(gridExtra)
 
 # Set working directory
-setwd("D:/Code/R/Soccer")
+setwd("YOUR WORKING DIRECTORY")
 
 # Retrieve team statistics data for the 2019-20 English Premier League season
 defense_stats <- fb_season_team_stats("ENG", "M", 2020, "1st", "defense")
@@ -77,5 +77,5 @@ plot <- ggplot(combined_data_long, aes(x = reorder(Team, -Value), y = Value, fil
   )
 
 # Save the plot as an image file
-ggsave(filename = "team_foul_rank_vs_league_rank_2019_20x.jpg", plot = plot, width = 12, height = 8, dpi = 300)
+ggsave(filename = "team_foul_rank_vs_league_rank_2019_20.jpg", plot = plot, width = 12, height = 8, dpi = 300)
 
